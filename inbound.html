@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inbound.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+    
+<header>
+  <div class="container header-container">
+     <div class="logo">
+                <img src="assets/WhatsApp Image 2026-04-21 at 06.57.21.jpeg" alt="T-BAINE SYNERGY CONSORTIUM" class="logo-image">
+            
+                <div class="logo-text">T-BAINE SYNERGY CONSORTIUM</div>
+            </div>
+
+    <!-- Hamburger button (your CSS uses .mobile-menu-btn) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation (your CSS hides it on mobile, shows when nav.active) -->
+    <nav id="mainNav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+        <li class="dropdown">
+          <a href="service.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html">Hotelier Services & Tourist Facilitation</a></li>
+            <li><a href="inbound.html">Inbound Handling</a></li>
+            <li><a href="services.html">Interior Designs & Decoration</a></li>
+            <li><a href="services.html">Intra-City (Accra) Errands</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<section class="services-hero">
+  <div class="hero-container">
+    <div class="hero-badge">
+      <span><i class="fas fa-crown" style="font-size: 0.8rem; margin-right: 6px;"></i> premium solutions</span>
+    </div>
+    <h1 class="hero-title">Innovative services that drive impact</h1>
+    <p class="hero-sub">Explore our core expertise — each slide reveals how we elevate your digital journey</p>
+
+    <!-- Slider main container (sliding hero section) -->
+    <div class="swiper servicesSwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- SLIDE 1 : Web Development -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-code" style="font-size: 2rem; background: none; -webkit-background-clip: unset; color: #4f46e5; margin-right: 12px;"></i> Web Development</h2>
+                <p class="service-description">Build lightning-fast, future-proof websites and web apps. From SPAs to enterprise portals, we craft responsive, SEO-optimized digital experiences with React, Vue, and cutting-edge backends.</p>
+                <a href="#" class="service-btn" aria-label="Discover Web Development">Discover <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 : Mobile App Development -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-mobile-alt" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Mobile Apps</h2>
+                <p class="service-description">Native & cross-platform apps that users love. Flutter, Swift, Kotlin — we deliver seamless, high-performance apps for iOS and Android with intuitive UI and robust backend integration.</p>
+                <a href="#" class="service-btn" aria-label="Explore Mobile Apps">Explore <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-mobile-screen-button"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 : UI/UX Design -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-paintbrush" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> UI/UX Design</h2>
+                <p class="service-description">Beautiful, human-centric interfaces that drive conversions. We merge research & creativity to design delightful journeys, interactive prototypes, and design systems that scale.</p>
+                <a href="#" class="service-btn" aria-label="View Design Solutions">View <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-pen-fancy"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 : Digital Marketing -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-chart-line" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Digital Marketing</h2>
+                <p class="service-description">Data-fueled strategies that skyrocket visibility. SEO, performance ads, social media, and content marketing — we grow your brand with measurable ROI and authentic engagement.</p>
+                <a href="#" class="service-btn" aria-label="Grow with Marketing">Grow <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-chart-simple"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 : Cloud Solutions -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-cloud" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Cloud Solutions</h2>
+                <p class="service-description">Scalable, secure infrastructure and DevOps. Migrate to AWS, Azure, or GCP with zero downtime. We optimize cloud costs and architect resilient, serverless ecosystems.</p>
+                <a href="#" class="service-btn" aria-label="Scale with Cloud">Scale <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-cloud-arrow-up"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- navigation arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -7,16 +7,16 @@
   
   <!-- Your existing CSS -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Font Awesome & Google Fonts (matching your CSS) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <body>
+
 <header>
   <div class="container header-container">
      <div class="logo">
-                <img src="assets/T-BAINE LOGO.jpeg" alt="T-BAINE SYNERGY CONSORTIUM" class="logo-image">
+                <img src="assets/WhatsApp Image 2026-04-21 at 06.57.21.jpeg" alt="T-BAINE SYNERGY CONSORTIUM" class="logo-image">
             
                 <div class="logo-text">T-BAINE SYNERGY CONSORTIUM</div>
             </div>
@@ -33,10 +33,10 @@
         <li><a href="about.html">About Us</a></li>
         
         <li class="dropdown">
-          <a href="services.html">Services</a>
+          <a href="service.html">Services</a>
           <ul class="dropdown-menu">
             <li><a href="services.html">Hotelier Services & Tourist Facilitation</a></li>
-            <li><a href="services.html">Inbound Handling</a></li>
+            <li><a href="inbound.html">Inbound Handling</a></li>
             <li><a href="services.html">Interior Designs & Decoration</a></li>
             <li><a href="services.html">Intra-City (Accra) Errands</a></li>
           </ul>
@@ -50,14 +50,21 @@
 </header>
 
 
-<!-- Hero Section with Zoom + Slide-in Effects -->
 <div class="hero-zoom">
   <section class="hero">
+    <div class="hero-bg"></div> <!-- background layer -->
+
     <div class="container hero-content">
-      <h1 class="slide-in-left">Excellence in <span class="highlight">Every Detail</span></h1>
-      <p class="slide-in-right">Your trusted partner in hotelier & hospitality management, tourism, interior designs & decoration, and intra-city errand services in Accra.</p>
-      <div class="hero-buttons fade-in-up">
-       
+      <h1 class="reveal-left">
+        Excellence in <span class="highlight">Every Detail</span>
+      </h1>
+
+      <p class="reveal-right">
+        Your trusted partner in hotelier & hospitality management, tourism,
+        interior designs & decoration, and intra-city errand services in Accra.
+      </p>
+
+      <div class="hero-buttons reveal-up">
         <a href="contact.html" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
@@ -80,67 +87,124 @@
 From 3D space modeling to final installation, we transform your space with modern Ghanaian and international aesthetics. Designs range from floor designs to ceiling of your project, capturing the totality of space at your convenience and affordability. Pro-forma designs and Deco samples are provided before commencement, considering the financial capacity of client -->
 .</p>
           <div class="stats">
-            <div class="stat"><h4>4</h4><p>Years Experience</p></div>
+            <div class="stat"><h4>2</h4><p>Years Experience</p></div>
             <div class="stat"><h4>20+</h4><p>Happy Clients</p></div>
             <div class="stat"><h4>100%</h4><p>Satisfaction</p></div>
           </div>
-          <a href="about.html" class="btn">Learn More About Us</a>
+          <a href="service.html" class="btn">Learn More About Us</a>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Services Banner Section -->
-<section class="services-banner">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title fade-up">Our Premium Services</h2>
-      <p class="section-subtitle fade-up">Tailored solutions delivered with excellence and attention to every detail</p>
+
+
+
+
+<section class="services-hero">
+  <div class="hero-container">
+    <div class="hero-badge">
+   
     </div>
+     <h2 class="section-title fade-up">Our Premium Services</h2>
+      <p class="section-subtitle fade-up">Tailored solutions delivered with excellence and attention to every detail</p>
 
-    <div class="services-grid">
-      <!-- Service 1 -->
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <i class="fas fa-hotel"></i>
+    <!-- Slider main container (sliding hero section) -->
+    <div class="swiper servicesSwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- SLIDE 1 : Web Development -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-bed" style="font-size: 2rem; background: none; -webkit-background-clip: unset; color: #4f46e5; margin-right: 12px;"></i> Hotelier Services & Tourist Facilitation</h2>
+                <p class="service-description">Seamless hotel bookings, accommodation management, and tourist support for a memorable stay.At T-Baine Synergy Consortium, we believe that hospitality is an art form and tourism is a bridge to discovery. In a rapidly evolving Ghanaian market, we serve as the strategic engine behind the country’s most refined boutique stays and immersive cultural journeys.
+We don't just manage properties or lead tours; we curate the "Ghanaian Experience" for the discerning global traveler and the visionary property owner.
+</p>
+                <a href="hotelier.html" class="service-btn" aria-label="Discover Web Development">contact us <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-bed"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3>Hotelier Services & Tourist Facilitation</h3>
-        <p>Seamless hotel bookings, accommodation management, and tourist support for a memorable stay.</p>
-        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-      </div>
 
-      <!-- Service 2 -->
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <i class="fas fa-plane-arrival"></i>
-        </div>
-        <h3>Inbound Handling</h3>
-        <p>Complete arrival support – airport transfers, meet & greet, visa assistance, and local guidance.</p>
-        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-      </div>
+        <!-- SLIDE 2 : Mobile App Development -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-truck" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Inbound Handling</h2>
+                <p class="service-description">Complete arrival support – airport transfers, meet & greet, visa assistance, and local guidance.
+                  In the high-stakes world of diplomacy and international business, the first sixty minutes on the ground can set the tone for an entire mission.The T-Baine Synergy Consortium specializes in turning the logistical chaos of arrival into a choreographed, high-precision experience.
+We act as your "Local Embassy for Logistics," ensuring that every dignitary, executive, or diplomat experiences a transition that is as secure as it is seamless.
 
-      <!-- Service 3 -->
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <i class="fas fa-palette"></i>
+                </p>
+                <a href="inbound.html" class="service-btn" aria-label="Explore Inbound Handling">learn more <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-truck"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3>Interior Designs & Decoration</h3>
-        <p>Elegant, personalized interior designs that transform spaces into inspiring environments.</p>
-        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-      </div>
 
-      <!-- Service 4 -->
-      <div class="service-card fade-up">
-        <div class="service-icon">
-          <i class="fas fa-shopping-cart"></i>
+        <!-- SLIDE 3 : UI/UX Design -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-paintbrush" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Interior Designs & Decoration</h2>
+                <p class="service-description">Elegant, personalized interior designs that transform spaces into inspiring environments.At T-Baine Synergy Consortium, we believe that a space should do more than just house people; it should tell a story. Our Interior Design & Decoration wing combines architectural precision with artistic flair to create environments that inspire productivity and exude luxury.
+We bridge the gap between "concept" and "completion" by leveraging advanced technology and a deep understanding of both modern Ghanaian heritage and global minimalism.
+.</p>
+                <a href="interior-design.html" class="service-btn" aria-label="View Design Solutions">learn more <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service-icon-large">
+                <i class="fas fa-pen-fancy"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3>Intra-City (Accra) Errands</h3>
-        <p>Fast, reliable errand services in Accra – deliveries, pickups, document handling, and more.</p>
-        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+
+        <!-- SLIDE 4 : Digital Marketing -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="slide-content">
+              <div class="info-section">
+                <h2 class="service-title"><i class="fas fa-truck" style="font-size: 2rem; background: none; color: #4f46e5; margin-right: 12px;"></i> Intra-City (Accra) Errands</h2>
+                <p class="service-description">Convenient and reliable errand services within Accra. From document pickups to grocery runs, we handle your tasks with efficiency and care
+                  At T-Baine Synergy Consortium, we redefine the concept of "running errands" by transforming everyday tasks into a professional, high-efficiency experience. We understand that in a fast-paced city like Accra, time is the ultimate luxury.
+Our Intra-City Errand & Logistics wing acts as your personal "remote control" for the city, allowing you to delegate the friction of Accra's traffic and logistics to our masters of execution.
+.</p>
+                <a href="intra-city.html" class="service-btn" aria-label="Learn More">learn more <i class="fas fa-arrow-right"></i></a>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 : Cloud Solutions -->
+     
+
       </div>
+      <!-- navigation arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
 <section class="cta">
   <div class="container">
     <h2>Ready to experience excellence?</h2>
@@ -153,13 +217,6 @@ From 3D space modeling to final installation, we transform your space with moder
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 
 
 
@@ -209,7 +266,11 @@ From 3D space modeling to final installation, we transform your space with moder
   </div>
 </footer>
 
-
+<a href="https://wa.me/233544733932?text=Hello%20T-Baine%20Synergy%20Consortium,%20I%20would%20like%20to%20make%20an%20inquiry." 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 <!-- Your custom JS (if any) -->
 <script src="script.js"></script>

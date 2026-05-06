@@ -197,5 +197,183 @@ if (nav.classList.contains('active')) {
         }
       });
     }, { threshold: 0.2, rootMargin: "0px 0px -20px 0px" });
+document.addEventListener("DOMContentLoaded", function () {
 
-    fadeElements.forEach(el => observer.observe(el));
+  /* ================= FADE ANIMATION ================= */
+  const fadeElements = document.querySelectorAll(".fade, .reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  });
+
+  fadeElements.forEach(el => {
+    if (el) observer.observe(el);
+  });
+
+
+  /* ================= SLIDER ================= */
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+
+  let index = 0;
+
+  function showSlide(i) {
+    index = i;
+
+    if (slider) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  }
+
+  // DOT CLICK
+  dots.forEach(dot => {
+    dot.addEventListener("click", function () {
+      showSlide(Number(this.dataset.index));
+    });
+  });
+
+  // AUTO SLIDE
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5000);
+
+
+  /* ================= CONTACT FORM ================= */
+  const form = document.getElementById("contactForm");
+
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById("fullname")?.value.trim();
+      const userEmail = document.getElementById("email")?.value.trim();
+      const messageText = document.getElementById("message")?.value.trim();
+
+      if (!fullName || !userEmail || !messageText) {
+        alert("Please fill all fields ✨");
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(userEmail)) {
+        alert("Invalid email");
+        return;
+      }
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          alert(`✨ Thank you ${fullName}! We will contact you soon.`);
+          form.reset();
+        } else {
+          alert("❌ Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("❌ Something went wrong. Please try again.");
+      }
+
+      const btn = form.querySelector(".btn-send");
+      if (btn) {
+        btn.innerHTML = "Sent ✓";
+        setTimeout(() => {
+          btn.innerHTML = "Send inquiry";
+        }, 1500);
+      }
+    });
+  }
+
+});
+
+
+   // Wait for full DOM and any images
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.servicesSwiper', {
+      // sliding parameters — true hero experience
+      loop: true,                // infinite loop sliding
+      autoplay: {
+        delay: 5500,            // smooth interval between slides
+        disableOnInteraction: false,  // keeps autoplay after user clicks
+        pauseOnMouseEnter: true,      // modern ux: pause on hover over slider
+      },
+      speed: 700,               // smooth transition speed
+      effect: 'slide',          // classic sliding hero
+      grabCursor: true,
+      slidesPerView: 1,         // one full service slide at a time
+      spaceBetween: 0,
+      keyboard: {
+        enabled: true,          // keyboard navigation (left/right arrow)
+        onlyInViewport: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: false,
+      },
+      // improve mobile gestures
+      touchRatio: 1,
+      threshold: 5,
+      // maintain nice a11y
+      a11y: {
+        prevSlideMessage: 'Previous service',
+        nextSlideMessage: 'Next service',
+        firstSlideMessage: 'First service slide',
+        lastSlideMessage: 'Last service slide',
+        paginationBulletMessage: 'Go to service {{index}}',
+      },
+      // optional: breakpoints responsiveness for future adjustments (always 1 slide, but ensures correct padding)
+      breakpoints: {
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1280: { slidesPerView: 1 }
+      },
+      // ensures that after slide change, focus remains optional, but smooth
+      on: {
+        init: function () {
+          // small fix to avoid hidden content on load
+          document.querySelectorAll('.swiper-slide').forEach(slide => {
+            slide.style.opacity = '';
+          });
+        }
+      }
+    });
+
+    // Pause autoplay on hover for improved UX (already with pauseOnMouseEnter:true)
+    // Additionally we manage cursor elegance
+    const swiperContainer = document.querySelector('.servicesSwiper');
+    if (swiperContainer) {
+      swiperContainer.addEventListener('mouseenter', () => {
+        if (swiper.autoplay && swiper.autoplay.running) swiper.autoplay.stop();
+      });
+      swiperContainer.addEventListener('mouseleave', () => {
+        if (swiper.autoplay && !swiper.autoplay.running) swiper.autoplay.start();
+      });
+    }
+
+    // small fallback for any dynamic height changes: ensure swiper updates layout
+    window.addEventListener('resize', () => {
+      swiper.update();
+    });
+  });
+
+
+  
