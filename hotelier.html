@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Baine Synergy | Premier Hotelier Services & Tourist Facilitation</title>
+    <link rel="stylesheet" href="hotelier.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+   <header>
+  <div class="container header-container">
+     <div class="logo">
+                <img src="assets/WhatsApp Image 2026-04-21 at 06.57.21.jpeg" alt="T-BAINE SYNERGY CONSORTIUM" class="logo-image">
+            
+                <div class="logo-text">T-BAINE SYNERGY CONSORTIUM</div>
+            </div>
+
+    <!-- Hamburger button (your CSS uses .mobile-menu-btn) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation (your CSS hides it on mobile, shows when nav.active) -->
+    <nav id="mainNav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+        <li class="dropdown">
+          <a href="service.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="hotelier.html">Hotelier Services & Tourist Facilitation</a></li>
+            <li><a href="inbound.html">Inbound Handling</a></li>
+            <li><a href="interior.html">Interior Designs & Decoration</a></li>
+            <li><a href="intracity.html">Intra-City (Accra) Errands</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero with catchy image and confidence messaging -->
+  <div class="hero-section">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fas fa-medal"></i> Ghana's Premier Hospitality Partner</div>
+      <h2>Hotelier Services & <br>Tourist Facilitation</h2>
+      <p>Seamless hotel bookings, accommodation management, and tourist support for a memorable stay. At T-Baine Synergy Consortium, we believe hospitality is art — we curate the authentic “Ghanaian Experience” for global travelers and property visionaries.</p>
+      <div class="hero-stats">
+        <div><strong>98%</strong><br>Guest Retention</div>
+        <div><strong>50+</strong><br>Boutique Partners</div>
+        <div><strong>24/7</strong><br>Concierge Support</div>
+      </div>
+      <div class="btn-group">
+        <button class="btn-primary" id="heroCta">Start your journey →</button>
+        <button class="btn-outline" id="learnMore">Explore solutions</button>
+      </div>
+    </div>
+    <div class="hero-image" title="Luxury hotelier service in Ghana"></div>
+  </div>
+
+  <!-- Confident imagery: 4 service cards with high-quality photography (boost trust) -->
+  <div class="confidence-grid">
+    <div class="section-header">
+      <h3>Services that inspire confidence & excellence</h3>
+      <p>Tailored for hoteliers, loved by travelers — every detail is crafted to elevate the Ghanaian hospitality landscape.</p>
+    </div>
+    <div class="card-grid">
+      <div class="service-card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format');"></div>
+        <div class="card-content"><h4>Accommodation Mastery</h4><p>Full-cycle management: from boutique openings to yield optimization & guest loyalty programs.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&auto=format');"></div>
+        <div class="card-content"><h4>Tourist Concierge</h4><p>Personalized itineraries, cultural immersion, airport transfers, 24/7 support for worry-free travels.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&auto=format');"></div>
+        <div class="card-content"><h4>Revenue & Strategy</h4><p>Dynamic pricing, OTA negotiations, direct booking engines to maximize RevPAR & profitability.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1590073242678-70ee3fc28f8e?w=600&auto=format');"></div>
+        <div class="card-content"><h4>Experience Curation</h4><p>Ghanaian heritage tours, culinary trails, artisanal workshops & private cultural events.</p></div>
+      </div>
+    </div>
+  </div>
+
+
+
+<section id="hotel-gallery" class="shutter-section">
+  <div class="container">
+    
+    <div class="section-header">
+      <h2>Hotelier Services Gallery</h2>
+      <p>Experience our premium hospitality, interiors & travel facilitation</p>
+    </div>
+
+    <!-- Filter Buttons (optional) -->
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="hotel">Hotels</button>
+      <button data-filter="interior">Interior</button>
+      <button data-filter="tour">Tours</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+
+      <div class="gallery-item hotel">
+        <img src="assets/hotel23.jpg" alt="">
+        <div class="overlay">
+          <h3>Luxury Hotel Rooms</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item interior">
+        <img src="assets/moderndesign.jpg" alt="">
+        <div class="overlay">
+          <h3>Modern Interior Design</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item tour">
+        <img src="assets/tour.jpg" alt="">
+        <div class="overlay">
+          <h3>Accra City Tours</h3>
+        </div>
+      </div>
+
+      <div class="gallery-item hotel">
+        <img src="assets/b339909b-1f13-48f4-b6e1-1d107df840e3.JPG" alt="">
+        <div class="overlay">
+          <h3>Reception Experience</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Testimonial + trust badges with nice visual -->
+  <div class="testimonial-wrap">
+    <div class="testimonial-quote">
+      <i class="fas fa-quote-left"></i>
+      <p>"T-Baine Synergy transformed our boutique property into a top-ranked destination. Their tourist facilitation and hotelier insights boosted our occupancy by 43% in six months. Absolute confidence in their team."</p>
+      <div class="testimonial-author">— Akua Mensah, CEO <br> <span style="font-size:0.8rem;">Legacy Hills Resort, Accra</span></div>
+    </div>
+    <div class="trust-badge-img">
+      <i class="fas fa-shield-alt"></i>
+      <div class="badge-list">
+        <span><i class="fas fa-check-circle"></i> Certified Hotelier Experts</span>
+        <span><i class="fas fa-globe"></i> 500+ tours facilitated</span>
+      </div>
+      <div style="margin-top: 24px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2997/2997502.png" style="width:50px; opacity:0.7;" alt="trust">
+        <p style="font-size:0.75rem; margin-top: 12px;"><strong>Recognized by Ghana Tourism Authority</strong> — Excellence in Hospitality Innovation</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+<!-- Additional CTA Bridge -->
+<div class="cta-section">
+  <h3>Ready to redefine hospitality in Ghana?</h3>
+  <p>Let’s craft an unforgettable journey — for your guests and your property.</p>
+
+  <a href="contact.html" id="footerCta" class="cta-btn">
+    Start the conversation <i class="fas fa-long-arrow-alt-right"></i>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- COLUMN 1 -->
+      <div class="footer-col">
+        <h4>T-BAINE SYNERGY CONSORTIUM</h4>
+        <p>Excellence in every detail – your trusted partner in Accra.</p>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/tonymensahbaine?igsh=MTV1Z3hpaGNxNmFhcQ==&utm_source=ig_contact_invite">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="hotelier.html">Hotelier Services & Tourist Facilitation</a></li>
+          <li><a href="inbound.html">Inbound Handling</a></li>
+          <li><a href="interior.html">Interior Designs & Decoration</a></li>
+          <li><a href="intracity.html">Intra-City Errands in Accra</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 4 -->
+      <div class="footer-col newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe for updates and offers.</p>
+
+        <input type="email" placeholder="Your email">
+        <button class="btn">Subscribe</button>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+      <p>&copy; 2025 T-BAINE SYNERGY CONSORTIUM. All rights reserved.</p>
+    </div>
+
+  </div>
+
+</footer>
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/233544733932?text=Hello%20I%20want%20to%20make%20an%20inquiry"
+   class="whatsapp-float"
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

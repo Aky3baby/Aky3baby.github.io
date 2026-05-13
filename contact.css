@@ -91,25 +91,53 @@ nav a:hover {
   color: var(--gold);
 }
 
-/* DROPDOWN */
+/* =========================
+   DROPDOWN
+========================= */
 .dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 35px;
+  top: 45px;
   left: 0;
+
   background: var(--white);
-  padding: 10px;
-  display: none;
+  min-width: 260px;
+
+  display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  border-top: 2px solid var(--gold);
+
+  padding: 10px 0;
+
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* MOBILE MENU */
